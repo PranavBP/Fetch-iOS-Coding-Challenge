@@ -1,6 +1,6 @@
-# Project Title
+# Desserts Recipe App
 
-Fetch Rewards iOS Coding Challenge - Native iOS SwiftUI app that allows users to browse dessert recipes using the following API: https://themealdb.com/api.php 
+This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allows users to browse dessert recipes using the following API: https://themealdb.com/api.php 
 
 ## Table of Contents
 
