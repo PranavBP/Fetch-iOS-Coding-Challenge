@@ -11,6 +11,16 @@
 		AF9CDDC32B50F51A00E02DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CDDC22B50F51A00E02DBF /* ContentView.swift */; };
 		AF9CDDC52B50F51D00E02DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9CDDC42B50F51D00E02DBF /* Assets.xcassets */; };
 		AF9CDDC82B50F51D00E02DBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9CDDC72B50F51D00E02DBF /* Preview Assets.xcassets */; };
+		AF9CDDD22B50F59F00E02DBF /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CDDD12B50F59F00E02DBF /* Dessert.swift */; };
+		AF9CDDD42B50F5E300E02DBF /* DessertViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CDDD32B50F5E300E02DBF /* DessertViewVM.swift */; };
+		AFF74B292B5191AB00EFF516 /* DessertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B282B5191AB00EFF516 /* DessertView.swift */; };
+		AFF74B2B2B5191BA00EFF516 /* DessertRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B2A2B5191BA00EFF516 /* DessertRecipeView.swift */; };
+		AFF74B2D2B5191DF00EFF516 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B2C2B5191DF00EFF516 /* SettingsView.swift */; };
+		AFF74B2F2B51923E00EFF516 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B2E2B51923E00EFF516 /* TabBar.swift */; };
+		AFF74B332B51966B00EFF516 /* DessertCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B322B51966B00EFF516 /* DessertCardView.swift */; };
+		AFF74B372B51C92B00EFF516 /* DessertDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B362B51C92B00EFF516 /* DessertDetail.swift */; };
+		AFF74B392B51CBDF00EFF516 /* DessertDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B382B51CBDF00EFF516 /* DessertDetailVM.swift */; };
+		AFF74B3B2B52EBF400EFF516 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B3A2B52EBF400EFF516 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		AF9CDDC22B50F51A00E02DBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF9CDDC42B50F51D00E02DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9CDDC72B50F51D00E02DBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF9CDDD12B50F59F00E02DBF /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
+		AF9CDDD32B50F5E300E02DBF /* DessertViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewVM.swift; sourceTree = "<group>"; };
+		AFF74B282B5191AB00EFF516 /* DessertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertView.swift; sourceTree = "<group>"; };
+		AFF74B2A2B5191BA00EFF516 /* DessertRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRecipeView.swift; sourceTree = "<group>"; };
+		AFF74B2C2B5191DF00EFF516 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AFF74B2E2B51923E00EFF516 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		AFF74B322B51966B00EFF516 /* DessertCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertCardView.swift; sourceTree = "<group>"; };
+		AFF74B362B51C92B00EFF516 /* DessertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetail.swift; sourceTree = "<group>"; };
+		AFF74B382B51CBDF00EFF516 /* DessertDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailVM.swift; sourceTree = "<group>"; };
+		AFF74B3A2B52EBF400EFF516 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				AF9CDDC02B50F51A00E02DBF /* Fetch_RecipeApp.swift */,
-				AF9CDDC22B50F51A00E02DBF /* ContentView.swift */,
+				AF9CDDCE2B50F54500E02DBF /* Models */,
+				AF9CDDD02B50F55700E02DBF /* Views */,
+				AF9CDDCF2B50F54D00E02DBF /* ViewModels */,
 				AF9CDDC42B50F51D00E02DBF /* Assets.xcassets */,
 				AF9CDDC62B50F51D00E02DBF /* Preview Content */,
 			);
@@ -65,6 +87,54 @@
 				AF9CDDC72B50F51D00E02DBF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF9CDDCE2B50F54500E02DBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CDDD12B50F59F00E02DBF /* Dessert.swift */,
+				AFF74B362B51C92B00EFF516 /* DessertDetail.swift */,
+				AFF74B3A2B52EBF400EFF516 /* Ingredient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF9CDDCF2B50F54D00E02DBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CDDD32B50F5E300E02DBF /* DessertViewVM.swift */,
+				AFF74B382B51CBDF00EFF516 /* DessertDetailVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AF9CDDD02B50F55700E02DBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74B312B51963500EFF516 /* Components */,
+				AFF74B302B51962A00EFF516 /* Main */,
+				AF9CDDC22B50F51A00E02DBF /* ContentView.swift */,
+				AFF74B282B5191AB00EFF516 /* DessertView.swift */,
+				AFF74B2A2B5191BA00EFF516 /* DessertRecipeView.swift */,
+				AFF74B2C2B5191DF00EFF516 /* SettingsView.swift */,
+				AFF74B2E2B51923E00EFF516 /* TabBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFF74B302B51962A00EFF516 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AFF74B312B51963500EFF516 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74B322B51966B00EFF516 /* DessertCardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +207,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF74B392B51CBDF00EFF516 /* DessertDetailVM.swift in Sources */,
+				AFF74B3B2B52EBF400EFF516 /* Ingredient.swift in Sources */,
+				AFF74B2D2B5191DF00EFF516 /* SettingsView.swift in Sources */,
 				AF9CDDC32B50F51A00E02DBF /* ContentView.swift in Sources */,
+				AFF74B2B2B5191BA00EFF516 /* DessertRecipeView.swift in Sources */,
+				AFF74B2F2B51923E00EFF516 /* TabBar.swift in Sources */,
+				AFF74B372B51C92B00EFF516 /* DessertDetail.swift in Sources */,
+				AF9CDDD22B50F59F00E02DBF /* Dessert.swift in Sources */,
+				AFF74B292B5191AB00EFF516 /* DessertView.swift in Sources */,
+				AFF74B332B51966B00EFF516 /* DessertCardView.swift in Sources */,
+				AF9CDDD42B50F5E300E02DBF /* DessertViewVM.swift in Sources */,
 				AF9CDDC12B50F51A00E02DBF /* Fetch_RecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,11 +355,14 @@
 				DEVELOPMENT_TEAM = D362DCU3WQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Challenge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +387,14 @@
 				DEVELOPMENT_TEAM = D362DCU3WQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Challenge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
