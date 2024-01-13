@@ -15,7 +15,9 @@ This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allow
 
 - This app is a delightful culinary companion designed to satisfy your sweet cravings. It offers you to explore and prepare a variety of desserts.
 - You can navigate through enticing options and select your preferred dessert. Once a dessert is chosen, you can view the step-by-step instructions and ingredients required to cook the dessert.
-  
+
+https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/f7770128-d02b-4ac8-8367-fc5acde2b545
+
 ## Features
 
 1. The app has two main screens
