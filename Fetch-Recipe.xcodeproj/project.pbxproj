@@ -21,6 +21,10 @@
 		AFF74B372B51C92B00EFF516 /* DessertDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B362B51C92B00EFF516 /* DessertDetail.swift */; };
 		AFF74B392B51CBDF00EFF516 /* DessertDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B382B51CBDF00EFF516 /* DessertDetailVM.swift */; };
 		AFF74B3B2B52EBF400EFF516 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B3A2B52EBF400EFF516 /* Ingredient.swift */; };
+		AFF74B422B531F2B00EFF516 /* DessertDetail2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B3E2B531F2B00EFF516 /* DessertDetail2.png */; };
+		AFF74B432B531F2B00EFF516 /* Dessert.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B3F2B531F2B00EFF516 /* Dessert.png */; };
+		AFF74B442B531F2B00EFF516 /* Dessert2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B402B531F2B00EFF516 /* Dessert2.png */; };
+		AFF74B452B531F2B00EFF516 /* DessertDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B412B531F2B00EFF516 /* DessertDetail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		AFF74B362B51C92B00EFF516 /* DessertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetail.swift; sourceTree = "<group>"; };
 		AFF74B382B51CBDF00EFF516 /* DessertDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailVM.swift; sourceTree = "<group>"; };
 		AFF74B3A2B52EBF400EFF516 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		AFF74B3E2B531F2B00EFF516 /* DessertDetail2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DessertDetail2.png; sourceTree = "<group>"; };
+		AFF74B3F2B531F2B00EFF516 /* Dessert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dessert.png; sourceTree = "<group>"; };
+		AFF74B402B531F2B00EFF516 /* Dessert2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dessert2.png; sourceTree = "<group>"; };
+		AFF74B412B531F2B00EFF516 /* DessertDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DessertDetail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		AF9CDDBF2B50F51A00E02DBF /* Fetch-Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				AFF74B3C2B531EA900EFF516 /* Other */,
 				AF9CDDC02B50F51A00E02DBF /* Fetch_RecipeApp.swift */,
 				AF9CDDCE2B50F54500E02DBF /* Models */,
 				AF9CDDD02B50F55700E02DBF /* Views */,
@@ -137,6 +146,25 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		AFF74B3C2B531EA900EFF516 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74B3D2B531EB700EFF516 /* Screenshots */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AFF74B3D2B531EB700EFF516 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74B402B531F2B00EFF516 /* Dessert2.png */,
+				AFF74B3E2B531F2B00EFF516 /* DessertDetail2.png */,
+				AFF74B412B531F2B00EFF516 /* DessertDetail.png */,
+				AFF74B3F2B531F2B00EFF516 /* Dessert.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,8 +223,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF74B452B531F2B00EFF516 /* DessertDetail.png in Resources */,
+				AFF74B442B531F2B00EFF516 /* Dessert2.png in Resources */,
+				AFF74B422B531F2B00EFF516 /* DessertDetail2.png in Resources */,
 				AF9CDDC82B50F51D00E02DBF /* Preview Assets.xcassets in Resources */,
 				AF9CDDC52B50F51D00E02DBF /* Assets.xcassets in Resources */,
+				AFF74B432B531F2B00EFF516 /* Dessert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
