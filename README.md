@@ -20,18 +20,17 @@ This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allow
 
 1. The app has two main screens
   - DessertListView: Displays an array of desserts in a LazyVGrid fetched dynamically from the API endpoint "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert".
-    ![alt text](https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/blob/main/Fetch-Recipe/Other/Screenshots/Dessert.png?raw=true)
-
+    
     <p float="left">
-      <img src="/Fetch-Recipe/Other/Screenshots/Dessert.png" width="100" />
-      <img src="/Fetch-Recipe/Other/Screenshots/Dessert2.png" width="100" /> 
+      <img src="/Fetch-Recipe/Other/Screenshots/Dessert.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/Dessert2.png" width="200" /> 
     </p>
 
   - DessertDetailView: It provides detailed instructions and ingredients needed to craft the perfect dessert.
 
     <p float="left">
-      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail.png" width="100" />
-      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail2.png" width="100" /> 
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail2.png" width="200" /> 
     </p>
 
 
