@@ -1,6 +1,6 @@
 # Desserts Recipe App
 
-This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allows users to browse dessert recipes using the following API: https://themealdb.com/api.php 
+This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allows users to browse dessert recipes using the following API: [The MealDB Dessert API](https://themealdb.com/api.php) 
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allow
 
 ## Overview
 
-- This app is a delightful culinary companion designed to satisfy your sweet cravings. It offers you to explore and prepare a variety of desserts.
+- This app is a delightful culinary companion designed to satisfy your sweet cravings. It allows you to explore and prepare a variety of desserts.
 - You can navigate through enticing options and select your preferred dessert. Once a dessert is chosen, you can view the step-by-step instructions and ingredients required to cook the dessert.
 
 https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/f7770128-d02b-4ac8-8367-fc5acde2b545
@@ -21,14 +21,14 @@ https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/f7770128-
 ## Features
 
 1. The app has two main screens
-  - DessertListView: Displays an array of desserts in a LazyVGrid fetched dynamically from the API endpoint "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert".
+  - DessertListView: Displays an array of desserts in a LazyVGrid fetched dynamically from the API endpoint: (https://themealdb.com/api/json/v1/1/filter.php?c=Dessert).
     
     <p float="left">
       <img src="/Fetch-Recipe/Other/Screenshots/Dessert.png" width="200" />
       <img src="/Fetch-Recipe/Other/Screenshots/Dessert2.png" width="200" /> 
     </p>
 
-  - DessertDetailView: It provides detailed instructions and ingredients needed to craft the perfect dessert.
+  - DessertDetailView: It provides detailed instructions and ingredients to cook the perfect dessert. The details of the dessert are fetched from the API endpoint (https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID), where MEAL_ID is id of the dessert
 
     <p float="left">
       <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail.png" width="200" />
@@ -36,23 +36,38 @@ https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/f7770128-
     </p>
 
 
-
-2.  Tabbar - The app demonstarted the usage of tabbar, it has 2 main tabs
-  - Dessert - Shows the DessertListView
-  - Settings - Displays the version number of app.
+2.  Tabbar - The app demonstrates the usage of TabBar, it has 2 main tabs
+  - Desserts - Shows all the desserts.
+  - Settings - Displays the version number of the app, name, and details for the contributor. 
 
 ## Architecture
 
-This app follow the MVVM architecture, below is the brief explaination.
+This app follows the MVVM architecture, I've included a brief explanation below.
 
-1. Views: DessertListview, DessertDetailView
-2. ViewModels: DessertListVM, DessertDetailVM
-3. Models: Dessert, DessertDetail and Ingredient
+1. Views: 
+  - DessertListview:
+    - Presents a collection of desserts in a LazyVGrid, with each Dessert represented as an individual card(DessertCardView).
+  - DessertCardView:
+    - This card is an abstracted SwiftUI view, which shows the image and name of the dessert. 
+  - DessertDetailView:
+    - This view shows the image, instructions, and ingredients of the dessert.
+
+2. ViewModels:
+   - DessertListVM:
+     - This class includes ```fetchData()``` method that initiates a network request to the MealDB API. The API response, containing the dessert data, is asynchronously processed.
+     - The dessert data undergoes two main operations: Handling null values and alphabetical sorting the desserts.
+   - DessertDetailVM:
+     - This class includes ```fetchDessertDetail()``` method that takes in a parameter "mealID", and initiates a network request to the MealDB API. The API response contains the data of all the ingredients and instructions. 
+
+3. Models: 
+  - Dessert
+  - DessertDetail
+  - Ingredient
 
 ## Requirements
 
-- Xcode version: Please make sure you have the latest Xcode version 15.0 and above.
-- iOS version: This projects minimum deployement target is iOS 15.0, as Fetch also supports 15 and above.
+- Xcode version: Please ensure you have the latest Xcode version 15.0 and above.
+- iOS version: This project's minimum deployment target is iOS 15.0, as Fetch also supports 15 and above.
 
 ## Getting Started
 
