@@ -9,6 +9,8 @@ import Foundation
 
 /// A struct representing an ingredient
 struct Ingredient: Hashable {
+    /// Name of the ingredient
     let name: String
+    /// Quantity or measure of ingredient
     let measurement: String
 }

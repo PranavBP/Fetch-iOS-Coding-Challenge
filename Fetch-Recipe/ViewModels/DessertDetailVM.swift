@@ -11,8 +11,13 @@ class DessertDetailVM: ObservableObject {
     
     init() {}
     
-    @Published var dessertDetails: DessertDetails? = nil
+    @Published private(set) var dessertDetails: DessertDetails? = nil
     
+    /**
+     func fetchDessertDetail(id: String)
+     - parameter id: The dessert id
+     - This function takes an id and uses it in the URL dynamically to fetch the dessert details.
+     */
     func fetchDessertDetail(id: String) {
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(id)") else {
             print("URL doesnt exist")
@@ -34,7 +39,9 @@ class DessertDetailVM: ObservableObject {
                     let image = meal["strMealThumb"] as? String ?? ""
                     var ingredients: [Ingredient] = []
                     
+                    // Assuming only max of 20 ingredients.
                     for i in 1...20 {
+                        // Checking for null values in ingredient.
                         guard let ingredient = meal["strIngredient\(i)"] as? String,
                               !ingredient.isEmpty,
                               let measure = meal["strMeasure\(i)"] as? String,
