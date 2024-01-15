@@ -32,6 +32,7 @@ https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/f7770128-
 
     <p float="left">
       <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail1.png" width="200" />
       <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail2.png" width="200" /> 
     </p>
 
