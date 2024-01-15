@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBar: View {
     var body: some View {
         TabView {
-            DessertView()
+            DessertListView()
                 .tabItem {
                     Label("Desserts", systemImage: "fork.knife.circle.fill")
                 }
@@ -20,6 +20,7 @@ struct TabBar: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
+        .accentColor(.pink)
     }
 }
 

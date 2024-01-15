@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DessertView: View {
+struct DessertListView: View {
     
     @StateObject var viewModel = DessertViewVM()
     
@@ -35,5 +35,5 @@ struct DessertView: View {
 }
 
 #Preview {
-    DessertView()
+    DessertListView()
 }

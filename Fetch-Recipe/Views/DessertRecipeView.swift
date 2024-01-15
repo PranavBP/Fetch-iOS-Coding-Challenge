@@ -16,6 +16,10 @@ struct DessertRecipeView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 if let dessertDetail = viewModel.dessertDetails {
+                    
+                    // MARK: - DESSERT IMAGE
+                    // Using Async Image - iOS15 +
+                    
                     AsyncImage(url: URL(string: dessertDetail.thumbnail)) { image in
                         image
                             .resizable()
@@ -29,37 +33,38 @@ struct DessertRecipeView: View {
                     .frame(height: 400)
                     .background(Color.gray)
                     
+                    // MARK: - DESSERT DETAILS
                     
                     VStack(spacing: 20) {
                         Text(dessertDetail.name)
-                            .font(.largeTitle)
+                            .font(.custom("Avenir-Black", size: 34.0))
                             .bold()
                             .multilineTextAlignment(.center)
                             .padding()
                         
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Instructions:")
-                                .font(.title2)
+                                .font(.custom("Avenir-Medium", size: 24.0))
                                 .bold()
                             
                             Text(dessertDetail.instructions)
-                            
+                                .font(.custom("Avenir", size: 16.0))
                             
                             Text("Ingredients List:")
-                                .font(.title2)
+                                .font(.custom("Avenir-Medium", size: 24.0))
                                 .bold()
-                                
-                                ForEach(dessertDetail.ingredients, id: \.self) { ingredient in
-                                    HStack {
-                                        Text(ingredient.name)
-                                            .font(.body)
-                                        
-                                        Spacer()
-                                        
-                                        Text(ingredient.measurement)
-                                            .bold()
-                                    }
+                            
+                            ForEach(dessertDetail.ingredients, id: \.self) { ingredient in
+                                HStack {
+                                    Text(ingredient.name)
+                                    
+                                    Spacer()
+                                    
+                                    Text(ingredient.measurement)
+                                        .bold()
                                 }
+                                .font(.custom("Avenir", size: 16.0))
+                            }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -82,5 +87,6 @@ struct DessertRecipeView: View {
 }
 
 #Preview {
+    // Preview for Banana Pancakes Recipe
     DessertRecipeView(idMeal: "52855")
 }

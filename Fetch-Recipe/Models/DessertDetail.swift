@@ -9,9 +9,13 @@ import Foundation
 
 /// A struct reprsenting the Dessert Details
 struct DessertDetails {
+    /// Name of Dessert
     let name: String
+    /// Instructions to cook dessert
     let instructions: String
+    /// Image of dessert
     let thumbnail: String
+    /// Array of ingredients required for dessert
     let ingredients: [Ingredient]
     
     init() {
