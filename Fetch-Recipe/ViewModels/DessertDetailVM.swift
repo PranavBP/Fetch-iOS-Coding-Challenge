@@ -36,8 +36,9 @@ class DessertDetailVM: ObservableObject {
                 guard let dessert = dessertDetails.meals.first else {
                     return
                 }
-                let name = dessert["strMeal"] as? String
-                let inst = dessert["strInstructions"] as? String
+                let name = dessert["strMeal"] as? String ?? "No Name"
+                let inst = dessert["strInstructions"] as? String ?? "No Instructions provided"
+                let instPoints = self?.formatInstructionString(inst) ?? "No Instructions provided"
                 let image = dessert["strMealThumb"] as? String ?? ""
                 var ingredients: [Ingredient] = []
                 
@@ -53,8 +54,8 @@ class DessertDetailVM: ObservableObject {
                     ingredients.append(Ingredient(name: ingredient.uppercased(), measurement: measure))
                 }
                 
-                currentDessertDetails = DessertDetails(name: name ?? "No Name",
-                                                       instructions: inst ?? "No Instructions provided",
+                currentDessertDetails = DessertDetails(name: name,
+                                                       instructions: instPoints,
                                                        thumbnail: image,
                                                        ingredients: ingredients)
                 DispatchQueue.main.async {
@@ -65,5 +66,23 @@ class DessertDetailVM: ObservableObject {
             }
         }
         task.resume()
+    }
+    
+    // For better formatting of the dessert recipe instructions.
+    private func formatInstructionString(_ str: String) -> String {
+        var formattedString = ""
+        
+        // Split the input string
+        let lines = str.components(separatedBy: "\r\n")
+        var index = 1
+        
+        for line in lines {
+            // Add numeric points and a new line
+            if !line.isEmpty {
+                formattedString.append("\(index). \(line)\n\r")
+                index += 1
+            }
+        }
+        return formattedString
     }
 }

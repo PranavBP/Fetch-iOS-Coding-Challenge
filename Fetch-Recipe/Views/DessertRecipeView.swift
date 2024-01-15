@@ -40,17 +40,12 @@ struct DessertRecipeView: View {
                             .font(.custom("Avenir-Black", size: 34.0))
                             .bold()
                             .multilineTextAlignment(.center)
-                            .padding()
                         
                         VStack(alignment: .leading, spacing: 20) {
-                            Text("Instructions:")
-                                .font(.custom("Avenir-Medium", size: 24.0))
-                                .bold()
                             
-                            Text(dessertDetail.instructions)
-                                .font(.custom("Avenir", size: 16.0))
+                            // MARK: - DESSERT INGREDIENTS
                             
-                            Text("Ingredients List:")
+                            Text("Ingredients:")
                                 .font(.custom("Avenir-Medium", size: 24.0))
                                 .bold()
                             
@@ -63,8 +58,17 @@ struct DessertRecipeView: View {
                                     Text(ingredient.measurement)
                                         .bold()
                                 }
-                                .font(.custom("Avenir", size: 16.0))
+                                .font(.custom("Avenir", size: 15.0))
                             }
+                            
+                            // MARK: - DESSERT RECIPE INSTRUCTIONS
+                            
+                            Text("Instructions:")
+                                .font(.custom("Avenir-Medium", size: 24.0))
+                                .bold()
+                            
+                            Text(dessertDetail.instructions)
+                                .font(.custom("Avenir", size: 16.0))
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
