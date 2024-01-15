@@ -33,29 +33,30 @@ class DessertDetailVM: ObservableObject {
                 let dessertDetails = try JSONDecoder().decode(DessertData.self, from: data)
                 var currentDessertDetails = DessertDetails()
                 
-                for meal in dessertDetails.meals {
-                    let name = meal["strMeal"] as? String
-                    let inst = meal["strInstructions"] as? String
-                    let image = meal["strMealThumb"] as? String ?? ""
-                    var ingredients: [Ingredient] = []
-                    
-                    // Assuming only max of 20 ingredients.
-                    for i in 1...20 {
-                        // Checking for null values in ingredient.
-                        guard let ingredient = meal["strIngredient\(i)"] as? String,
-                              !ingredient.isEmpty,
-                              let measure = meal["strMeasure\(i)"] as? String,
-                              !measure.isEmpty else {
-                            break
-                        }
-                        ingredients.append(Ingredient(name: ingredient.uppercased(), measurement: measure))
-                    }
-                    
-                    currentDessertDetails = DessertDetails(name: name ?? "No Name",
-                                                        instructions: inst ?? "No Instructions provided",
-                                                        thumbnail: image,
-                                                        ingredients: ingredients)
+                guard let dessert = dessertDetails.meals.first else {
+                    return
                 }
+                let name = dessert["strMeal"] as? String
+                let inst = dessert["strInstructions"] as? String
+                let image = dessert["strMealThumb"] as? String ?? ""
+                var ingredients: [Ingredient] = []
+                
+                // Assuming only max of 20 ingredients.
+                for i in 1...20 {
+                    // Validate and retrieve ingredient and measure data, checking for null values.
+                    guard let ingredient = dessert["strIngredient\(i)"] as? String,
+                          !ingredient.isEmpty,
+                          let measure = dessert["strMeasure\(i)"] as? String,
+                          !measure.isEmpty else {
+                        break
+                    }
+                    ingredients.append(Ingredient(name: ingredient.uppercased(), measurement: measure))
+                }
+                
+                currentDessertDetails = DessertDetails(name: name ?? "No Name",
+                                                       instructions: inst ?? "No Instructions provided",
+                                                       thumbnail: image,
+                                                       ingredients: ingredients)
                 DispatchQueue.main.async {
                     self?.dessertDetails = currentDessertDetails
                 }
