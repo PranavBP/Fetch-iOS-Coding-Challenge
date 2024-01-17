@@ -35,13 +35,13 @@ struct DessertRecipeView: View {
                     
                     // MARK: - DESSERT DETAILS
                     
-                    VStack(spacing: 20) {
+                    VStack(spacing: 15) {
                         Text(dessertDetail.name)
                             .font(.custom("Avenir-Black", size: 34.0))
                             .bold()
                             .multilineTextAlignment(.center)
                         
-                        VStack(alignment: .leading, spacing: 20) {
+                        VStack(alignment: .leading, spacing: 10) {
                             
                             // MARK: - DESSERT INGREDIENTS
                             
@@ -50,15 +50,7 @@ struct DessertRecipeView: View {
                                 .bold()
                             
                             ForEach(dessertDetail.ingredients, id: \.self) { ingredient in
-                                HStack {
-                                    Text(ingredient.name)
-                                    
-                                    Spacer()
-                                    
-                                    Text(ingredient.measurement)
-                                        .bold()
-                                }
-                                .font(.custom("Avenir", size: 15.0))
+                                IngredientRowView(ingredient: ingredient)
                             }
                             
                             // MARK: - DESSERT RECIPE INSTRUCTIONS
@@ -71,8 +63,9 @@ struct DessertRecipeView: View {
                                 .font(.custom("Avenir", size: 16.0))
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
                     }
-                    .padding()
+                    
                 } else {
                     VStack {
                         ProgressView("Loading...")

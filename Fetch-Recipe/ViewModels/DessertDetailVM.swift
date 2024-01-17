@@ -45,12 +45,12 @@ class DessertDetailVM: ObservableObject {
                 // Assuming only max of 20 ingredients.
                 for i in 1...20 {
                     // Validate and retrieve ingredient and measure data, checking for null values.
-                    guard let ingredient = dessert["strIngredient\(i)"] as? String,
-                          !ingredient.isEmpty,
-                          let measure = dessert["strMeasure\(i)"] as? String,
-                          !measure.isEmpty else {
-                        break
-                    }
+                    guard
+                        let ingredient = dessert["strIngredient\(i)"] as? String,
+                        !ingredient.isEmpty,
+                        let measure = dessert["strMeasure\(i)"] as? String,
+                        !measure.isEmpty
+                    else { break }
                     ingredients.append(Ingredient(name: ingredient.uppercased(), measurement: measure))
                 }
                 
