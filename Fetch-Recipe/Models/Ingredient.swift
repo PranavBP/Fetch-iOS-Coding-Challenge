@@ -8,9 +8,10 @@
 import Foundation
 
 /// A struct representing an ingredient
-struct Ingredient: Hashable {
+struct Ingredient: Identifiable, Decodable {
+    var id: String = UUID().uuidString
     /// Name of the ingredient
     let name: String
     /// Quantity or measure of ingredient
-    let measurement: String
+    let measure: String
 }

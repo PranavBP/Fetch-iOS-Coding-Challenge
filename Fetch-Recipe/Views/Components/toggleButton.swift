@@ -13,6 +13,8 @@ struct toggleButton: View {
     
     var body: some View {
         Button {
+//            HapticManager.shared.impact(style: .heavy)
+            HapticManager.shared.notification(type: .success)
             isChecked.toggle()
         } label: {
             Image(systemName: isChecked ? "checkmark.square.fill" : "square")

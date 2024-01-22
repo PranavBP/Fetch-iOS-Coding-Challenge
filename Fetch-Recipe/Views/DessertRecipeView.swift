@@ -9,22 +9,34 @@ import SwiftUI
 
 struct DessertRecipeView: View {
     
-    let idMeal: String
-    @StateObject private var viewModel = DessertDetailVM()
+    @StateObject private var viewModel: DessertDetailVM
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    init(idMeal: String) {
+        _viewModel = StateObject(wrappedValue: DessertDetailVM(dessertId: idMeal))
+    }
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView(.vertical) {
-                if let dessertDetail = viewModel.dessertDetails {
+        ScrollView(.vertical) {
+            if let dessertDetail = viewModel.dessertDetails {
+                
+                // MARK: - DESSERT IMAGE
+                // Using Async Image - iOS15 +
+                
+                ZStack(alignment: .topLeading) {
                     
-                    // MARK: - DESSERT IMAGE
-                    // Using Async Image - iOS15 +
-                    
-                    AsyncImage(url: URL(string: dessertDetail.thumbnail)) { image in
+                    AsyncImage(url: URL(string: dessertDetail.strMealThumb ?? "")) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .opacity(0.8)
+                            .overlay {
+                                LinearGradient(
+                                    colors: [Color.clear, Color.clear, Color(UIColor.systemBackground)],
+                                    startPoint: .top,
+                                    endPoint: .bottom)
+                            }
+                        
                     } placeholder: {
                         Image(systemName: "photo")
                             .resizable()
@@ -33,53 +45,62 @@ struct DessertRecipeView: View {
                     .frame(height: 400)
                     .background(Color.gray)
                     
-                    // MARK: - DESSERT DETAILS
-                    
-                    VStack(spacing: 15) {
-                        Text(dessertDetail.name)
-                            .font(.custom("Avenir-Black", size: 34.0))
-                            .bold()
-                            .multilineTextAlignment(.center)
-                        
-                        VStack(alignment: .leading, spacing: 10) {
-                            
-                            // MARK: - DESSERT INGREDIENTS
-                            
-                            Text("Ingredients:")
-                                .font(.custom("Avenir-Medium", size: 24.0))
-                                .bold()
-                            
-                            ForEach(dessertDetail.ingredients, id: \.self) { ingredient in
-                                IngredientRowView(ingredient: ingredient)
-                            }
-                            
-                            // MARK: - DESSERT RECIPE INSTRUCTIONS
-                            
-                            Text("Instructions:")
-                                .font(.custom("Avenir-Medium", size: 24.0))
-                                .bold()
-                            
-                            Text(dessertDetail.instructions)
-                                .font(.custom("Avenir", size: 16.0))
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                    }
-                    
-                } else {
-                    VStack {
-                        ProgressView("Loading...")
+                    // CLOSE Button
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .foregroundStyle(.white)
+                            .frame(width: 25, height: 25)
                             .padding()
-                            .frame(width: geometry.size.width)
-                            .frame(minHeight: geometry.size.height)
+                    })
+                }
+                
+                // MARK: - DESSERT DETAILS
+                
+                VStack(spacing: 15) {
+                    Text(dessertDetail.strMeal ?? "")
+                        .font(.custom("Avenir-Black", size: 34.0))
+                        .bold()
+                        .multilineTextAlignment(.center)
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        
+                        // MARK: - DESSERT INGREDIENTS
+                        
+                        Text("Ingredients:")
+                            .font(.custom("Avenir-Medium", size: 24.0))
+                            .bold()
+                        
+                        ForEach(dessertDetail.ingredients ?? []) { ingredient in
+                            IngredientRowView(ingredient: ingredient)
+                        }
+                        
+                        Divider()
+                            .padding(.top, 8.0)
+                        
+                        // MARK: - DESSERT RECIPE INSTRUCTIONS
+                        
+                        Text("Instructions:")
+                            .font(.custom("Avenir-Medium", size: 24.0))
+                            .bold()
+                        
+                        Text(dessertDetail.strInstructions ?? "")
+                            .font(.custom("Avenir", size: 16.0))
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                }
+                
+            } else {
+                VStack {
+                    ProgressView("Loading...")
+                        .padding()
                 }
             }
-            .ignoresSafeArea(.container, edges: .top)
-            .onAppear() {
-                viewModel.fetchDessertDetail(id: idMeal)
-            }
         }
+        .ignoresSafeArea(.container, edges: .top)
     }
 }
 

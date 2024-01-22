@@ -21,7 +21,7 @@ struct IngredientRowView: View {
             
             Spacer()
             
-            Text(ingredient.measurement)
+            Text(ingredient.measure)
                 .bold()
                 .foregroundStyle(.pink)
                 .padding(.trailing, 7.0)
@@ -36,7 +36,7 @@ struct IngredientRowView: View {
 
 #Preview() {
     Group {
-        IngredientRowView(ingredient: Ingredient(name: "Eggs", measurement: "3"))
-        IngredientRowView(ingredient: Ingredient(name: "Milk", measurement: "500 ml"))
+        IngredientRowView(ingredient: Ingredient(name: "Eggs", measure: "3"))
+        IngredientRowView(ingredient: Ingredient(name: "Milk", measure: "500 ml"))
     }
 }

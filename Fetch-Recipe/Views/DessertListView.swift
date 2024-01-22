@@ -10,6 +10,7 @@ import SwiftUI
 struct DessertListView: View {
     
     @StateObject var viewModel = DessertViewVM()
+    @State var selectedDessert: Dessert? = nil
     
     var body: some View {
         NavigationView {
@@ -17,16 +18,17 @@ struct DessertListView: View {
                 VStack {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 170, maximum: 250), spacing: 0)], spacing: 16) {
                         ForEach(viewModel.desserts) { dessert in
-                            NavigationLink(destination: DessertRecipeView(idMeal: dessert.id)) {
-                                DessertCardView(dessert: dessert)
-                            }
+                            DessertCardView(dessert: dessert)
+                                .onTapGesture {
+                                    selectedDessert = dessert
+                                }
                         }
                     }
                     .padding(.top)
                 }
                 .navigationTitle("Desserts")
-                .onAppear {
-                    viewModel.fetchData()
+                .sheet(item: $selectedDessert) { dessert in
+                    DessertRecipeView(idMeal: dessert.id)
                 }
             }
         }

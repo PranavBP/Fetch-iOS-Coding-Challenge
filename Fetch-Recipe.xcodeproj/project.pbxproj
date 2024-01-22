@@ -28,6 +28,10 @@
 		AFF74B492B54F7F200EFF516 /* DessertDetail2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B462B54F7F200EFF516 /* DessertDetail2.png */; };
 		AFF74B4A2B54F7F200EFF516 /* DessertDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B472B54F7F200EFF516 /* DessertDetail.png */; };
 		AFF74B4B2B54F7F200EFF516 /* DessertDetail1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF74B482B54F7F200EFF516 /* DessertDetail1.png */; };
+		AFFFB9892B5C6CFE006EF897 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB9882B5C6CFE006EF897 /* NetworkManager.swift */; };
+		AFFFB98C2B5C867F006EF897 /* DessertDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB98B2B5C867F006EF897 /* DessertDataService.swift */; };
+		AFFFB98E2B5D8169006EF897 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB98D2B5D8169006EF897 /* HapticManager.swift */; };
+		AFFFB9902B5E19EE006EF897 /* DessertDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFB98F2B5E19EE006EF897 /* DessertDetailService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		AFF74B462B54F7F200EFF516 /* DessertDetail2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DessertDetail2.png; sourceTree = "<group>"; };
 		AFF74B472B54F7F200EFF516 /* DessertDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DessertDetail.png; sourceTree = "<group>"; };
 		AFF74B482B54F7F200EFF516 /* DessertDetail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DessertDetail1.png; sourceTree = "<group>"; };
+		AFFFB9882B5C6CFE006EF897 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AFFFB98B2B5C867F006EF897 /* DessertDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDataService.swift; sourceTree = "<group>"; };
+		AFFFB98D2B5D8169006EF897 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		AFFFB98F2B5E19EE006EF897 /* DessertDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				AF9CDDC02B50F51A00E02DBF /* Fetch_RecipeApp.swift */,
-				AFF74B3C2B531EA900EFF516 /* Other */,
+				AFFFB98A2B5C866B006EF897 /* Services */,
+				AFFFB9872B5C6CB5006EF897 /* Utilities */,
 				AF9CDDCE2B50F54500E02DBF /* Models */,
 				AF9CDDCF2B50F54D00E02DBF /* ViewModels */,
 				AF9CDDD02B50F55700E02DBF /* Views */,
+				AFF74B3C2B531EA900EFF516 /* Other */,
 				AF9CDDC42B50F51D00E02DBF /* Assets.xcassets */,
 				AF9CDDC62B50F51D00E02DBF /* Preview Content */,
 			);
@@ -164,6 +174,24 @@
 				AFF74B3F2B531F2B00EFF516 /* Dessert.png */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		AFFFB9872B5C6CB5006EF897 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AFFFB9882B5C6CFE006EF897 /* NetworkManager.swift */,
+				AFFFB98D2B5D8169006EF897 /* HapticManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AFFFB98A2B5C866B006EF897 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AFFFB98B2B5C867F006EF897 /* DessertDataService.swift */,
+				AFFFB98F2B5E19EE006EF897 /* DessertDetailService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,15 +274,19 @@
 				AFF74B2D2B5191DF00EFF516 /* SettingsView.swift in Sources */,
 				AF9CDDC32B50F51A00E02DBF /* ContentView.swift in Sources */,
 				AFF74B2B2B5191BA00EFF516 /* DessertRecipeView.swift in Sources */,
+				AFFFB9902B5E19EE006EF897 /* DessertDetailService.swift in Sources */,
 				AFF74B2F2B51923E00EFF516 /* TabBar.swift in Sources */,
 				AFF74B372B51C92B00EFF516 /* DessertDetail.swift in Sources */,
 				AF9CDDD22B50F59F00E02DBF /* Dessert.swift in Sources */,
+				AFFFB98C2B5C867F006EF897 /* DessertDataService.swift in Sources */,
 				AFC054232B5645CE004B1874 /* IngredientRowView.swift in Sources */,
 				AFBC343B2B58899C00E5FE36 /* toggleButton.swift in Sources */,
 				AFF74B292B5191AB00EFF516 /* DessertListView.swift in Sources */,
 				AFF74B332B51966B00EFF516 /* DessertCardView.swift in Sources */,
+				AFFFB9892B5C6CFE006EF897 /* NetworkManager.swift in Sources */,
 				AF9CDDD42B50F5E300E02DBF /* DessertViewVM.swift in Sources */,
 				AF9CDDC12B50F51A00E02DBF /* Fetch_RecipeApp.swift in Sources */,
+				AFFFB98E2B5D8169006EF897 /* HapticManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
