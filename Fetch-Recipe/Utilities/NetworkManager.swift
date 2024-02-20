@@ -58,6 +58,7 @@ class NetworkManager {
     }
     
     //MARK: - Using URLSession DataTask
+    
     static func downloadData(fromURL url: URL, completion: @escaping (_ data: Data?) -> ()) {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

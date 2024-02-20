@@ -29,8 +29,6 @@ struct DessertCardView: View {
                     .shadow(color: .gray, radius: 3.0)
             }
             
-            Spacer()
-            
             // MARK: - Dessert Name
             
             Text(dessert.strMeal)

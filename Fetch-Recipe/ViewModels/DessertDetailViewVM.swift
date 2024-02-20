@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class DessertDetailVM: ObservableObject {
+class DessertDetailViewVM: ObservableObject {
     
     @Published private(set) var dessertDetails: Meals? = nil
     
@@ -22,6 +22,8 @@ class DessertDetailVM: ObservableObject {
         addSubscribers()
     }
     
+    // MARK: - 1. USING COMBINE
+    
     func addSubscribers() {
         dataService.$dessertDetails
             .sink { [weak self] returnedDessertDetails in
@@ -31,9 +33,7 @@ class DessertDetailVM: ObservableObject {
     }
     
     
-    
-    
-    // MARK: - USING URLSESSION DATATASK
+    // MARK: - 2. USING URLSESSION DATATASK
     
     /**
      func fetchDessertDetail(id: String)
@@ -66,5 +66,4 @@ class DessertDetailVM: ObservableObject {
             }
         }
     }
-    
 }

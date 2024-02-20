@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct DessertRecipeView: View {
+struct DessertDetailView: View {
     
-    @StateObject private var viewModel: DessertDetailVM
+    @StateObject private var viewModel: DessertDetailViewVM
     
     @Environment(\.presentationMode) var presentationMode
     
     init(idMeal: String) {
-        _viewModel = StateObject(wrappedValue: DessertDetailVM(dessertId: idMeal))
+        _viewModel = StateObject(wrappedValue: DessertDetailViewVM(dessertId: idMeal))
     }
     
     var body: some View {
@@ -106,5 +106,5 @@ struct DessertRecipeView: View {
 
 #Preview {
     // Preview for Banana Pancakes Recipe
-    DessertRecipeView(idMeal: "52855")
+    DessertDetailView(idMeal: "52855")
 }

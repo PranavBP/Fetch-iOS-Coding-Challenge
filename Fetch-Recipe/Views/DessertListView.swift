@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DessertListView: View {
     
-    @StateObject var viewModel = DessertViewVM()
+    @StateObject var viewModel = DessertListViewVM()
     @State var selectedDessert: Dessert? = nil
     
     var body: some View {
@@ -28,7 +28,7 @@ struct DessertListView: View {
                 }
                 .navigationTitle("Desserts")
                 .sheet(item: $selectedDessert) { dessert in
-                    DessertRecipeView(idMeal: dessert.id)
+                    DessertDetailView(idMeal: dessert.id)
                 }
             }
         }
