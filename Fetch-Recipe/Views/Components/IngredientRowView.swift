@@ -2,7 +2,7 @@
 //  IngredientRowView.swift
 //  Fetch-Recipe
 //
-//  Created by Pranav Bellam Prasad on 1/16/24.
+//  Created by Pranav Bellam Prasad on 5/6/24.
 //
 
 import SwiftUI
@@ -10,24 +10,27 @@ import SwiftUI
 struct IngredientRowView: View {
     
     var ingredient: Ingredient
-    @State var ingredientAvailable: Bool = false
     
     var body: some View {
         HStack {
-            toggleButton(isChecked: $ingredientAvailable)
+            ToggleButton()
             
             Text(ingredient.name)
-                .padding(.leading, 7.0)
+                .bodyTextStyle(isBold: false)
+                .padding(.leading, 8.0)
+            
+//            BodyTextView(text: ingredient.name, isBold: false)
+//                .padding(.leading, 8.0)
             
             Spacer()
             
             Text(ingredient.measure)
-                .bold()
+                .bodyTextStyle(isBold: true)
+//            BodyTextView(text: ingredient.measure, isBold: true)
                 .foregroundStyle(.pink)
-                .padding(.trailing, 7.0)
+                .padding(.trailing, 8.0)
         }
-        .font(.custom("Avenir", size: 14.0))
-        .frame(height: 42)
+        .frame(height: 52)
         .background(.regularMaterial)
         .clipShape(.capsule)
         .shadow(color: .pink.opacity(0.2), radius: 10)
