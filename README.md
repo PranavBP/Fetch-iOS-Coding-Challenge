@@ -16,24 +16,22 @@ This is Fetch Rewards iOS Coding Challenge - a Native iOS SwiftUI app that allow
 - This app is a delightful culinary companion designed to satisfy your sweet cravings. It allows you to explore and prepare a variety of desserts.
 - You can navigate through enticing options and select your preferred dessert. Once a dessert is chosen, you can view the step-by-step instructions and ingredients required to cook the dessert.
 
-https://github.com/PranavBP/Fetch-iOS-Coding-Challenge/assets/59755967/8c01f37d-9888-4703-90e9-1d77dd2b4884
-
 ## Features
 
 1. The app has two main screens
   - DessertListView: Displays an array of desserts in a LazyVGrid fetched dynamically from the API endpoint: (https://themealdb.com/api/json/v1/1/filter.php?c=Dessert).
     
     <p float="left">
-      <img src="/Fetch-Recipe/Other/Screenshots/Dessert.png" width="200" />
-      <img src="/Fetch-Recipe/Other/Screenshots/Dessert2.png" width="200" /> 
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertList-1.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertList-2.png" width="200" /> 
     </p>
 
-  - DessertDetailView: It provides detailed instructions and ingredients to cook the perfect dessert. The details of the dessert are fetched from the API endpoint (https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID), where MEAL_ID is id of the dessert
+  - DessertDetailView: It provides detailed instructions and ingredients to cook the perfect dessert. The dessert details are fetched from the API endpoint (https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID), where MEAL_ID is the id of the dessert.
 
     <p float="left">
-      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail.png" width="200" />
-      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail1.png" width="200" />
-      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail2.png" width="200" /> 
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail-1.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail-3.png" width="200" />
+      <img src="/Fetch-Recipe/Other/Screenshots/DessertDetail-5.png" width="200" /> 
     </p>
 
 
@@ -56,14 +54,14 @@ This app follows the MVVM architecture, I've included a brief explanation below.
 2. ViewModels:
    - DessertListVM:
      - This class includes ```fetchData()``` method that initiates a network request to the MealDB API. The API response, containing the dessert data, is asynchronously processed.
-     - The dessert data undergoes two main operations: Handling null values and alphabetical sorting the desserts.
+     - The dessert data undergoes two main operations: Handling null values and alphabetically sorting the desserts.
    - DessertDetailVM:
      - This class includes ```fetchDessertDetail()``` method that takes in a parameter "mealID", and initiates a network request to the MealDB API. The API response contains the data of all the ingredients and instructions. 
 
 3. Models: 
-  - Dessert
-  - DessertDetail
-  - Ingredient
+  - Meal - A struct representing a dessert with a unique identifier.
+  - MealDetail - A struct representing the details of the meal. Also has a custom decoder for decoding the values and formatting the instruction string.
+  - Ingredient - A struct representing an ingredient
 
 ## Requirements
 
