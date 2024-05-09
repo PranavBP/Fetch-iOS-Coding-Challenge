@@ -19,14 +19,10 @@ struct IngredientRowView: View {
                 .bodyTextStyle(isBold: false)
                 .padding(.leading, 8.0)
             
-//            BodyTextView(text: ingredient.name, isBold: false)
-//                .padding(.leading, 8.0)
-            
             Spacer()
             
             Text(ingredient.measure)
                 .bodyTextStyle(isBold: true)
-//            BodyTextView(text: ingredient.measure, isBold: true)
                 .foregroundStyle(.pink)
                 .padding(.trailing, 8.0)
         }

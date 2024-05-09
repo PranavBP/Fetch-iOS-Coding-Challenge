@@ -14,6 +14,7 @@ struct DessertCardView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             // MARK: - Dessert Image
+            
             AsyncImage(url: URL(string: dessert.strMealThumb)) { image in
                 image
                     .resizable()

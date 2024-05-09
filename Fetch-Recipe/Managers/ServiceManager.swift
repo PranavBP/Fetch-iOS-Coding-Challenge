@@ -33,7 +33,7 @@ class ServiceManager {
     /// Send API call
     /// - Parameters:
     ///   - request: URL to fetch data from
-    ///   - type: The type of object we want
+    ///   - type: The type of object we want - Generic
     ///   - completion: Callback with data and error
     public func execute<T: Decodable>(_ request: URL, expecting type: T.Type, completion: @escaping (Result<T, ServiceError>) -> Void) {
         
