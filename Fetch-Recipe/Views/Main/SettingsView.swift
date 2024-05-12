@@ -15,7 +15,7 @@ struct SettingsView: View {
                 
                 Text("Name: Pranav Bellam Prasad")
                 
-                Link("Email: bellam.pranav@gmail.com", destination: URL(string: "mailto:bellam.pranav@gmail.com")!)
+                Link("Email: pranav.bellam@gmail.com", destination: URL(string: "mailto:pranav.bellam@gmail.com")!)
                 
                 Link(destination: URL(string: "https://bellam.vercel.app/")!, label: {
                     Text("Web: https://bellam.vercel.app/")

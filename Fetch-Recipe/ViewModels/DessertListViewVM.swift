@@ -10,7 +10,7 @@ import Foundation
 class DessertListViewVM: ObservableObject {
     
     @Published private(set) var desserts: [Meal]? = nil
-    @Published private(set) var error: String?
+    @Published private(set) var error: String? = nil
     
     init() {
         fetchData()

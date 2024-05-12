@@ -27,7 +27,7 @@ struct ErrorView: View {
                 Text("Reload")
                     .bodyTextStyle(isBold: true)
                     .frame(maxWidth: .infinity, minHeight: 52)
-                    .background(Color.black)
+                    .background(Color.red)
                     .foregroundStyle(.white)
                     .cornerRadius(15)
                     .padding(.horizontal, 20)

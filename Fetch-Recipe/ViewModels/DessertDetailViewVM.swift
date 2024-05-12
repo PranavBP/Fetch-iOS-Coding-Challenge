@@ -10,7 +10,7 @@ import Foundation
 class DessertDetailViewVM: ObservableObject {
     
     @Published private(set) var dessertDetails: MealDetail? = nil
-    @Published private(set) var error: String?
+    @Published private(set) var error: String? = nil
     
     private let dessertId: String
     
@@ -22,9 +22,7 @@ class DessertDetailViewVM: ObservableObject {
     /// This function takes an mealId and uses it in the URL dynamically to fetch the dessert details.
     /// - Parameter mealId: Dessert ID
     func fetchDessertDetail(with mealId: String) {
-        guard let url = Endpoint.lookup(id: mealId).url else {
-            return
-        }
+        guard let url = Endpoint.lookup(id: mealId).url else { return }
         
         DispatchQueue.global(qos: .default).async {
             ServiceManager.shared.execute(url, expecting: MealDetailResponse.self) { result in

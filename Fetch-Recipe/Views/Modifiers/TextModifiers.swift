@@ -11,7 +11,6 @@ struct TitleStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Avenir-Black", size: 34.0))
-            .bold()
             .multilineTextAlignment(.center)
     }
 }
@@ -20,7 +19,6 @@ struct SubTitleStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Avenir-Medium", size: 24.0))
-            .bold()
     }
 }
 

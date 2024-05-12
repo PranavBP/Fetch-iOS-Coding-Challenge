@@ -16,7 +16,7 @@ struct MealDetailResponse: Decodable {
     }
 }
 
-/// A struct representing the details of the meal.
+/// A struct representing all the details of the meal.
 struct MealDetail: Decodable, Identifiable {
     var id: String {idMeal}
     let idMeal: String
@@ -25,6 +25,8 @@ struct MealDetail: Decodable, Identifiable {
     let strMealThumb: String?
     let ingredients: [Ingredient]?
 }
+
+// MARK: - EXTENSION
 
 /**
  Custom Decoder
