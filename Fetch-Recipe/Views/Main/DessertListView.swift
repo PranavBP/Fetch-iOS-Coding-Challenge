@@ -12,9 +12,6 @@ struct DessertListView: View {
     @StateObject var viewModel = DessertListViewVM()
     @State var selectedDessert: Meal? = nil
     
-    @State private var showAlert = false
-    @State private var alertMessage = ""
-    
     var body: some View {
         NavigationView {
             if let desserts = viewModel.desserts {
