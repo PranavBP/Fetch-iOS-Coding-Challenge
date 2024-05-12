@@ -62,13 +62,12 @@ extension MealDetail {
     static private func formatInstructionString(_ str: String) -> String {
         var formattedString = ""
         
-        // Split the input string
         let lines = str.components(separatedBy: "\r\n")
         var index = 1
         
         for line in lines {
             if !line.isEmpty {
-                // Add numeric points and a new line
+                // Adding numeric points and a new line
                 formattedString.append("\(index). \(line)\n\r")
                 index += 1
             }
